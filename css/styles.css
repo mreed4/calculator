@@ -28,8 +28,30 @@ header {
   margin: 0 auto;
   padding: 1em;
   border-radius: 0.5em;
-  width: 400px;
-  background-color: red;
+  width: 250px;
+  background-color: hsl(60, 50%, 96.1%);
+  border-bottom: 0 solid hsl(60, 25%, 75.1%);
+  border-width: 3px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+}
+
+#misc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+#misc > div:nth-child(2) {
+  background-color: hsl(0, 59.4%, 24.6%);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+  width: 6em;
+  padding: 0.3em;
+  border-radius: 4px;
+}
+
+#misc > div:nth-child(2) > span {
+  visibility: hidden;
 }
 
 #display {
@@ -39,6 +61,78 @@ header {
   border-radius: 4px;
   text-align: right;
   font-size: 250%;
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 1);
   color: rgba(0, 0, 0, 0.85);
+}
+
+#buttons {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.5em;
+  grid-template-areas:
+    "seven eight nine"
+    "four five six"
+    "one two three"
+    "zero point equals";
+}
+
+.calc-button {
+  background-color: hsl(0, 0%, 16.9%);
+  color: whitesmoke;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
+  display: inline-block;
+  padding: 0.5em 0;
+  font-size: 125%;
+  border-radius: 0.5em;
+  border-bottom: 3px solid hsl(0, 0%, 7.9%);
+}
+
+.btn-one {
+  grid-area: one;
+}
+
+.btn-two {
+  grid-area: two;
+}
+
+.btn-three {
+  grid-area: three;
+}
+
+.btn-four {
+  grid-area: four;
+}
+
+.btn-five {
+  grid-area: five;
+}
+
+.btn-six {
+  grid-area: six;
+}
+
+.btn-seven {
+  grid-area: seven;
+}
+
+.btn-eight {
+  grid-area: eight;
+}
+
+.btn-nine {
+  grid-area: nine;
+}
+
+.btn-zero {
+  grid-area: zero;
+}
+
+.btn-point {
+  grid-area: point;
+}
+
+.btn-equals {
+  grid-area: equals;
 }
