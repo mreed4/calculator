@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   border: 0;
+  user-select: none;
 }
 
 body {
@@ -84,7 +85,7 @@ header {
   grid-template-rows: repeat(5, 1fr);
   gap: 1em 0.75em;
   grid-template-areas:
-    ". . . divide"
+    "clear clear modulo divide"
     "seven eight nine multiply"
     "four five six subtract"
     "one two three add"
@@ -92,7 +93,7 @@ header {
 }
 
 .calc-button {
-  cursor: pointer;
+  /* cursor: pointer; */
   background-color: hsl(87, 76%, 59%);
   border: 2px solid hsl(87, 58%, 53%);
   border-bottom-color: hsl(88, 52%, 39%);
@@ -101,6 +102,7 @@ header {
   color: whitesmoke;
   text-shadow: 1px 1px 0 hsl(88, 52%, 39%);
   display: inline-block;
+  text-transform: uppercase;
   padding: 0.5em 0;
   font-size: 125%;
   border-radius: 4px;
@@ -169,4 +171,12 @@ header {
 
 .btn-multiply {
   grid-area: multiply;
+}
+
+.btn-modulo {
+  grid-area: modulo;
+}
+
+.btn-clear {
+  grid-area: clear;
 }
